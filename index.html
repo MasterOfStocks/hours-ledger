@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hours Ledger</title>
+<meta name="description" content="An independent, on-device record of the hours you work.">
+<meta name="theme-color" content="#16335f">
+<meta name="app-version" content="1.6">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" sizes="180x180" href="icons/icon-180.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="format-detection" content="telephone=no, date=no, address=no">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Hours Ledger">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="is-loading">
+<div class="app">
+  <nav class="side" aria-label="Sections">
+    <a class="brand" href="#dashboard"><span class="brand__mark" aria-hidden="true"></span><span>Hours Ledger</span></a>
+    <a data-nav="dashboard" href="#dashboard">Dashboard</a>
+    <a data-nav="shifts" href="#shifts">Shifts</a>
+    <a data-nav="reports" href="#reports">Reports</a>
+    <a data-nav="payslips" href="#payslips">Payslips</a>
+    <a data-nav="rota" href="#rota">Rota</a>
+    <a data-nav="evidence" href="#evidence">Evidence</a>
+    <a data-nav="bin" href="#bin">Bin</a>
+    <a data-nav="audit" href="#audit">Audit log</a>
+    <a data-nav="setup" href="#setup">Setup and backup</a>
+    <p class="side__foot">Independent of your employer's system. Records stay on this device.</p>
+  </nav>
+  <main id="main" class="main" tabindex="-1"><p class="loading">Opening your records…</p></main>
+  <nav class="tabbar" aria-label="Sections">
+    <a data-nav="dashboard" href="#dashboard">Home</a>
+    <a data-nav="shifts" href="#shifts">Shifts</a>
+    <a data-nav="reports" href="#reports">Reports</a>
+    <a data-nav="payslips" href="#payslips">Payslips</a>
+    <a data-nav="more" href="#more">More</a>
+  </nav>
+</div>
+<div id="toasts" class="toasts" aria-live="polite"></div>
+<input id="file-evidence" type="file" multiple hidden>
+<input id="file-camera" type="file" accept="image/*" capture="environment" hidden>
+<input id="file-import" type="file" accept=".zip,application/zip" hidden>
+<input id="file-rota" type="file" accept=".zip,.json,application/zip,application/json" hidden>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
